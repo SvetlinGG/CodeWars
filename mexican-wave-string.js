@@ -10,6 +10,9 @@ function solve(str){
     //     newArr.push(arr[i].charAt().toUpperCase());
     //     console.log(newArr);
     // }
+   let arr = str.split('');
+   arr = arr.map(word => word + word.toUpperCase());
+   console.log(arr);
    
     
     
