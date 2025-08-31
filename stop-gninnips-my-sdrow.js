@@ -5,10 +5,14 @@ function reverseWord(str){
     for ( let word of words){
         if ( word.length >= 6){
             let reversed = word.split('').reverse();
-            arr.push(reversed)
+            //arr.push(reversed)
+            console.log(reversed.join(''));
+            
         }
+        
+        
     }
-    console.log(arr);
+    //console.log(words);
     
     
 
