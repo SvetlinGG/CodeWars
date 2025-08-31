@@ -4,15 +4,12 @@ function reverseWord(str){
 
     for ( let word of words){
         if ( word.length >= 6){
-            let reversed = word.split('').reverse();
-            //arr.push(reversed)
-            console.log(reversed.join(''));
-            
+            word = word.split('').reverse();   
         }
-        
+        arr.push(word)
         
     }
-    //console.log(words);
+    console.log(arr.join(' '));
     
     
 
