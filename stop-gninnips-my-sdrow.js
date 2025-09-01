@@ -1,12 +1,14 @@
 function reverseWord(str){
     let words = str.split(' ');
-    words.map(word => {
-        if ( word.length >= 6){
-            word.split('').reverse();
-            
+    let arr = [];
+    for ( let word of words){
+        if (word.length >= 6){
+            let reversed = word.split('').reverse();
+            arr.push(reversed)
         }
-    })
-    console.log(words.join(' '));
+        //arr.push(word);
+    }
+    console.log(arr.join(' '));
     
 }
 reverseWord('Hey fellow warriors');
