@@ -3,12 +3,13 @@ function reverseWord(str){
     let arr = [];
     for ( let word of words){
         if (word.length >= 6){
-            let reversed = word.split('').reverse();
-            arr.push(reversed)
+            word = word.split('').reverse().join('');
+            //arr.push(word)
         }
-        //arr.push(word);
+        arr.push(word);
     }
     console.log(arr.join(' '));
     
 }
-reverseWord('Hey fellow warriors');
+//reverseWord('Hey fellow warriors');
+reverseWord('Just kidding there is still one more');
