@@ -15,4 +15,4 @@ function oddOrrEven(arr){
 
 }
 oddOrrEven([0, 1, 4]);
-oddOrrEven([0, -1, -5]);
+oddOrr

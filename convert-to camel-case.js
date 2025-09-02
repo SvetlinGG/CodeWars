@@ -15,4 +15,5 @@ function convert(str){
 
 
 }
-convert("the-stealth-warrior")
+convert("the-stealth-warrior");
+convert('The_Stealth_Warrior');
