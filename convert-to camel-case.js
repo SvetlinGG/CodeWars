@@ -3,12 +3,13 @@ function convert(str){
     
     let sentence = '';
     let result = str.match(/[a-zA-Z]+/g);
-    for ( let word of result){
-        word = word.charAt(0).toUpperCase() + word.slice(1)
-        sentence += word;
-        
+    let arr = [];
+    arr.push(result[0])
+    for ( let i = 1; i < result.length; i++){
+        let word = result[i].charAt(0).toUpperCase() + result[i].slice(1);
+        arr.push(word)
     }
-    console.log(sentence);
+    console.log(arr.join(''));
     
 }
 convert("the-stealth-warrior");
