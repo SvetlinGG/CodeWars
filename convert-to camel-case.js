@@ -6,4 +6,6 @@ function convert(str){
     console.log(result);
     
 }
-convert("the-steal
+convert("the-stealth-warrior");
+convert('The_Stealth_Warrior');
+convert('The_Stealth-Warrior')
