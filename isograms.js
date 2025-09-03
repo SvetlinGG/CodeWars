@@ -1,10 +1,18 @@
 function isIsogram(str){
 
-    let word = str.split('');
-    for ( let i = 0; i < word.length; i++){
-        if (word[i])
+    let seen = new Set()
+    for ( let char of str.toLowerCase()){
+
+        if (seen.has(char)){
+            return false;
+            
+        }
+        seen.add(char);
     }
+    return true;
     
 
 }
-isIsogram('Dermatoglyphics');
+//isIsogram('Dermatoglyphics');
+//isIsogram('aba');
+isIsogram('moOse')
