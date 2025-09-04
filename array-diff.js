@@ -7,7 +7,7 @@ function arrayDiff(a, b) {
     let replaced = a.map(n => {
         b.map(num => {
             if (n == num) {
-                return '';
+                a.slice(b);
               } else {
                 return n;
               }
