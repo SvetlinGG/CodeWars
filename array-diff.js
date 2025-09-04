@@ -1,9 +1,8 @@
 function arrayDiff(a, b) {
-
-    for ( let num of a){
-        console.log(num);
-        
-    }
+    b = b.join('')
+    let replaced = a.map(n => n == b ? '' : n);
+    console.log(replaced.join('').split('').map(Number));
+    
   
 }
 arrayDiff([1, 2], [1]);
