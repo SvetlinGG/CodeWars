@@ -1,5 +1,5 @@
 function solve(url){
-    let pattern = /(https?:\/\/)([a-z]+\.[a-z]+\W+)/
+    let pattern = /(https?:\/\/)([a-z]+\W[a-z]+)/
     let match = url.match(pattern);
     
     console.log(match[2]);
