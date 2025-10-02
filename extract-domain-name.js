@@ -4,7 +4,7 @@ function solve(url){
     let match = url.match(pattern);
     
     console.log(match[0]);
-    console.log(match);
+    
     
     
     
