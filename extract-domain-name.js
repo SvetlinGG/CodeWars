@@ -1,8 +1,8 @@
 function solve(url){
-    let pattern = /^(?:https?:\/\/|w+)?(www\.)?([a-z]+)/
+    let pattern = /(^\w+:|^)\/\//;
     
-    let match = url.replace(pattern);
-    console.log(match);
+    url = url.replace(pattern, '');
+    console.log(url);
     
     
     
