@@ -1,10 +1,11 @@
 function solve(url){
     let pattern = /^(?:https?:\/\/|w+)?(www\.)?([a-z]+)/
     
-    let match = url.match(pattern);
+    let match = url.replace(pattern);
+    console.log(match);
     
-    console.log(match[0]);
-    console.log(match[1]);
+    
+    
     
     
     
@@ -14,7 +15,7 @@ function solve(url){
 
 }
 solve("http://github.com/carbonfive/raygun");
-//solve("http://www.zombie-bites.com");
-//solve("https://www.cnet.com");
+solve("http://www.zombie-bites.com");
+solve("https://www.cnet.com");
 //solve("www.xakep.ru");
 
