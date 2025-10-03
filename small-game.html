@@ -33,11 +33,11 @@ let player = document.getElementById('player');
 let box = document.getElementById('box');
 let score = 0;
 
-// Задаваме начална позиция
+
 player.style.left = "180px";
 box.style.top = "0px";
 
-// Управление с клавиши
+
 document.addEventListener('keydown', e => {
   let left = parseInt(player.style.left);
   if (e.key === "ArrowLeft" && left > 0) {
@@ -48,7 +48,7 @@ document.addEventListener('keydown', e => {
   }
 });
 
-// Игрови цикъл – падане на кутията
+
 function dropBox(){
   let top = parseInt(box.style.top) || 0;
   if(top < 360){
@@ -60,7 +60,7 @@ function dropBox(){
       score++;
       document.getElementById('score').innerText = "Score: " + score;
     }
-    // ресетваме кутията
+    
     box.style.top = "0px";
     box.style.left = Math.floor(Math.random() * 360) + "px";
   }
