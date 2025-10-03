@@ -10,6 +10,7 @@
       border: 2px solid black;
       position: relative; margin: auto;
       background: #f0f0f0;
+      overflow: hidden;
     }
     #player, #box {
       width: 40px; height: 40px;
@@ -32,14 +33,22 @@ let player = document.getElementById('player');
 let box = document.getElementById('box');
 let score = 0;
 
-// Move player
+// Задаваме начална позиция
+player.style.left = "180px";
+box.style.top = "0px";
+
+// Управление с клавиши
 document.addEventListener('keydown', e => {
   let left = parseInt(player.style.left);
-  if (e.key === "ArrowLeft" && left > 0) player.style.left = left - 20 + "px";
-  if (e.key === "ArrowRight" && left < 360) player.style.left = left + 20 + "px";
+  if (e.key === "ArrowLeft" && left > 0) {
+    player.style.left = (left - 20) + "px";
+  }
+  if (e.key === "ArrowRight" && left < 360) {
+    player.style.left = (left + 20) + "px";
+  }
 });
 
-// Game loop
+// Игрови цикъл – падане на кутията
 function dropBox(){
   let top = parseInt(box.style.top) || 0;
   if(top < 360){
@@ -51,7 +60,7 @@ function dropBox(){
       score++;
       document.getElementById('score').innerText = "Score: " + score;
     }
-    // reset box
+    // ресетваме кутията
     box.style.top = "0px";
     box.style.left = Math.floor(Math.random() * 360) + "px";
   }
@@ -60,3 +69,4 @@ setInterval(dropBox, 200);
 </script>
 </body>
 </html>
+
