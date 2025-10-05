@@ -4,7 +4,7 @@ function generateHashtag(str){
     let pattern = /\s+/g;
     str = str.replace(pattern, '');
     for (let char of str){
-        
+        char.charAt(0).toUpperCase();
         arr.push(char)
     }
     console.log(arr.join(''));
@@ -13,6 +13,6 @@ function generateHashtag(str){
 
 
 }
-//generateHashtag(" Hello there thanks for trying my Kata");
-generateHashtag("   Hello     World   ");
+generateHashtag(" Hello there thanks for trying my Kata");
+//generateHashtag("   Hello     World   ");
 //generateHashtag("");
