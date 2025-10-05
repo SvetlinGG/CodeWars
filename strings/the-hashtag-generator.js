@@ -1,12 +1,10 @@
 function generateHashtag(str){
 
     let arr = ['#'];
-    let pattern = /\s+/;
-    //str = str.replace(pattern, '');
+    let pattern = /\s+/g;
+    str = str.replace(pattern, '');
     for (let char of str){
-        if ( char === pattern){
-            char = '';
-        }
+        
         arr.push(char)
     }
     console.log(arr.join(''));
