@@ -4,10 +4,8 @@ function generateHashtag(str){
     let pattern = /\s+/;
     //str = str.replace(pattern, '');
     for (let char of str){
-        if (char === ' '){
-            char.replace(" ", '');
-            arr.push(char)
-            
+        if ( char === pattern){
+            char = '';
         }
         arr.push(char)
     }
@@ -17,6 +15,6 @@ function generateHashtag(str){
 
 
 }
-generateHashtag(" Hello there thanks for trying my Kata");
+//generateHashtag(" Hello there thanks for trying my Kata");
 generateHashtag("   Hello     World   ");
-generateHashtag("");
+//generateHashtag("");
