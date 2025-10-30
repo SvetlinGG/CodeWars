@@ -29,6 +29,28 @@
 //     }
 
 // }
+
+function isSolved(board) {
+    const LINES = [
+      // rows
+      [[0,0],[0,1],[0,2]], [[1,0],[1,1],[1,2]], [[2,0],[2,1],[2,2]],
+      // cols
+      [[0,0],[1,0],[2,0]], [[0,1],[1,1],[2,1]], [[0,2],[1,2],[2,2]],
+      // diagonals
+      [[0,0],[1,1],[2,2]], [[0,2],[1,1],[2,0]],
+    ];
+  
+    // check winners
+    for (const player of [1, 2]) {
+      const won = LINES.some(line => line.every(([r, c]) => board[r][c] === player));
+      if (won) return player; // 1 for X, 2 for O
+    }
+  
+    // unfinished (-1) vs draw (0)
+    const hasEmpty = board.some(row => row.includes(0));
+    return hasEmpty ? -1 : 0;
+  }
+  
 isSolved([[1, 0, 1],
           [0, 1, 2],
           [2, 1, 0]]);
