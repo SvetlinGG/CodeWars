@@ -11,9 +11,11 @@ function solve(str){
     
     let char = str[i];
     let rest = str.slice(0, i) + str.slice(i + 1);
-       
+    //console.log(rest);
+    
        
     for ( let perm of rest){
+        
         arr.push(char + perm)  
     }
    }
@@ -22,4 +24,5 @@ function solve(str){
 }
 //solve('a')
 //solve('ab')
-solve('aabb')
+solve('abc')
+//solve('aabb')
