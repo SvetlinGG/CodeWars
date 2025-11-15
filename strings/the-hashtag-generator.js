@@ -4,8 +4,11 @@ function generateHashtag(str){
     let pattern = /\s+/g;
     //str = str.replace(pattern, '');
     for (let i = 0; i < str.length; i++){
-        let char = (i === 0) ? str[i].toUpperCase() : str[i];
-        arr.push(char)
+        if ( str[i] === pattern){
+            str.replace(pattern, '');
+            arr.push(str)
+        }
+        
     }
     console.log(arr.join(''));
     
