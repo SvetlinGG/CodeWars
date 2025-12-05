@@ -10,10 +10,10 @@ function sum(arr, result){
             }
         }
     }
+    console.log(newArr.length);
     console.log(newArr);
     
 
 
 }
-sum([1, 2, 3, 4], 6)
-sum([2, 1, 4, 4], 3)
+sum([7, 8, 9, 10, 5], 15)
