@@ -1,8 +1,8 @@
 function pigIt(str){
 
-    let pattern = '/([a-z,A-Z]+)/';
+    //let pattern = '/([a-z,A-Z]+)/';
     let char = 'ay';
-    let word = str.split(' ').map(w => w.slice(0));
+    let word = str.split(' ');
     console.log(word);
     
     
