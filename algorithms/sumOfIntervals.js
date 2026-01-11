@@ -18,10 +18,6 @@ function sumIntervals(intervals){
 
 
 }
-sumIntervals([
-    [1, 4],
-    [7, 10],
-    [3, 5]]);
  sumIntervals([[1, 2],
     [6, 10],
     [11, 15]]);
