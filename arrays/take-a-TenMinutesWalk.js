@@ -1,0 +1,5 @@
+function isValidWalk(walk){
+
+
+}
+isValidWalk()
