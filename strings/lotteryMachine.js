@@ -1,9 +1,22 @@
 
 function lottery(str){
 
-    let num = str.split('');
-    console.log(num);
+    let word = str.split('');
+    let arr = []
     
+    for (let i = 0; i < word.length; i ++){
+        
+        if (word[i] >= "0" && word[i] <= "9"){
+            
+            arr.push(word[i])
+        }
+        
+    }
+    if ( arr[0] === arr[1]){
+        console.log(arr[0]);
+        
+    }
+    console.log(arr.join(''));
 
 
 }
