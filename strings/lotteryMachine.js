@@ -12,11 +12,7 @@ function lottery(str){
         }
         
     }
-    if ( arr[0] === arr[1]){
-        console.log(arr[0]);
-        
-        
-    }
+    
     console.log(arr.join(''));
 
 
