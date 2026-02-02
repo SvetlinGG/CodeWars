@@ -1,8 +1,11 @@
 function rise(arr){
 
-    let newArr = [0, 0, 0, 0, 0];
+    //let result = Array.from({length: 5}, (_, i) => arr[0] + i*10);
 
-    console.log(newArr.length);
+    let result = [0, 0, 0, 0, 0];
+    result = result.map ( (_, i) => arr[0] + i * 10)
+    
+    console.log(result);
     
 
 
