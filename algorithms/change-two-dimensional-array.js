@@ -1,10 +1,35 @@
 function matrix(arr){
-    console.log(arr[1][1]);
-    console.log(arr[2][2]);
-    console.log(arr[3][3]);
-    console.log(arr[4][4]);
     
-
+    // let row1 = arr[0];
+    // let row2 = arr[1];
+    // let row3 = arr[2];
+    // let row4 = arr[3];
+    // let row5 = arr[4];
+    
+    // for (let i = 0; i<row1.length; i++){
+    //     for (let j = i+1; j<row2.length; j++){
+    //         for (let k = j+1; k<row3.length; k++){
+    //             for (let l = k+1; l<row4.length; l++){
+    //                 for (let m = l+1; m<row5.length; m++){
+    //                     console.log(row1[i]);
+    //                     console.log(row2[j]);
+    //                     console.log(row3[k]);
+    //                     console.log(row4[l]);
+    //                     console.log(row5[m]);
+                        
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i][i] < 0){
+            arr[i][i] = 0
+        }else {
+            arr[i][i] = 1;
+        }
+        console.log(arr);
+    }
 
 }
 matrix([
