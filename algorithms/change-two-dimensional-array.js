@@ -22,15 +22,18 @@ function matrix(arr){
     //         }
     //     }
     // }
+    let result;
     for (let i = 0; i < arr.length; i++){
         if (arr[i][i] < 0){
             arr[i][i] = 0
         }else {
             arr[i][i] = 1;
         }
-        console.log(arr);
+        result = arr;
     }
-
+    console.log(result);
+    
+    
 }
 matrix([
     [-1,  4, -5, -9,  3 ],
