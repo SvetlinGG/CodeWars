@@ -6,10 +6,15 @@ function encode(string) {
         o: 4,
         u: 5,
     }
-    for (let char of string) {
-        if ( char. )
-        
+    for ( let str of string){
+        for ( let char in vowel){
+            if ( str == char ){
+                string = string.replace(str, vowel[str])
+            }
+            
+        }
     }
+    console.log(string);
     
   }
   encode("hello")
