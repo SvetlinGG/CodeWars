@@ -9,16 +9,28 @@ function encode(string) {
     for ( let str of string){
         for ( let char in vowel){
             if ( str == char ){
-                string = string.replace(str, vowel[str])
+                string = string.replace(str, vowel[char])
             }
             
         }
     }
     console.log(string);
+
+    let decode = (string) => {
+        for( let char in vowel){
+            for( let str of string){
+
+                if ( str == char){
+                    string = string(vowel[char], str)
+                }
+            }
+        }
+    }
+    let newStr = decode();
+    console.log(newStr);
+    
     
   }
   encode("hello")
   
-  function decode(string) {
-    return
-  }
+  
