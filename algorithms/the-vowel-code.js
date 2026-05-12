@@ -20,13 +20,13 @@ function encode(string) {
         for( let char in vowel){
             for( let str of string){
 
-                if ( str == char){
-                    string = string(vowel[char], str)
+                
+                    string = string.replace(vowel[char], str)
                 }
             }
         }
-    }
-    let newStr = decode();
+    
+    let newStr = decode(string);
     console.log(newStr);
     
     
