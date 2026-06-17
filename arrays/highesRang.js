@@ -1,17 +1,30 @@
 function highestRank(arr){
-    let rank = {
-        num: 0,
-    }
+    let rank = {}
 
     for( let num of arr){
-        if (num){
-            rank.num = num;
-            rank[0] ++;
+        if (rank[num]){
+            rank[num] ++;
+        }else{
+            rank[num] = 1
         }
     }
-    console.log(rank);
+    
+    let highestCount = 0;
+    let result = null;
+    for ( let [number, count] of Object.entries(rank)){
+        number = Number(number);
+        if(count > highestCount){
+            highestCount = count;
+            result = number;
+        }else if ( count === highestCount && number > result){
+            result = number
+        }
+    }
+    console.log(result);
+    
+    
     
 }
 highestRank([12, 10, 8, 12, 7, 6, 4, 10, 12]);
-//highestRank([12, 10, 8, 12, 7, 6, 4, 10, 12, 10] );
-//highestRank([12, 10, 8, 8, 3, 3, 3, 3, 2, 4, 10, 12, 10]);
+highestRank([12, 10, 8, 12, 7, 6, 4, 10, 12, 10] );
+highestRank([12, 10, 8, 8, 3, 3, 3, 3, 2, 4, 10, 12, 10]);
