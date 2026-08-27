@@ -1,14 +1,20 @@
 function smallEnough(a, limit){
 
+    let positive = 0;
+    let negative = 0;
+
     a.map(num => {
-        if (num <= limit) {
-            console.log(true);
+        if (num <= limit) positive ++;
             
-        } else {
-            console.log(false);
-            
-        }
+         else negative ++;
     })
+    if ( negative > 0){
+        console.log(false);
+        
+    }else{
+        console.log(true);
+        
+    }
 
 }
 smallEnough([66, 101, 201], 200)
