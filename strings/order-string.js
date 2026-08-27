@@ -9,12 +9,4 @@ function solve(words){
       return numA - numB;
     })
   
-    console.log(text.join(' '));
-    
-
-    
-      
-
-
-}
-solve("is2 Thi1s T4est 3a")
+    console.log(
