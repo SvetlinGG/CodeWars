@@ -27,16 +27,25 @@ function high(x){
     y: 25,
     z: 26
 };
-    let score = 0;
-    let arr = x.map(word => word.split('')).map((word, index) => {
-        for (const [key, value] of Object.entries(alphabet)) {
-                if (key === word[index]){
+    
+    let newArr = [];
+    let arr = x.map(word => word.split('')).map((word) => {
+        let score = 0;
+        for ( let i = 0; i < word.length; i++){
+            for (const [key, value] of Object.entries(alphabet)) {
+                if (key === word[i]){
                     score += value;
                 }
+            }
         }
+        console.log(word.join(''), score);
+        newArr.push(score)
+        
+        
     });
-    
-    console.log(score);
+    let sort = newArr.sort((a, b) => a - b).pop();
+    console.log(sort.toString());
+    //console.log(score);
     
     
     
