@@ -28,10 +28,13 @@ function high(x){
     z: 26
 };
     let score = 0;
+    
     for ( let i = 0; i < x.length; i++){
-        if ( x[i].includes(alphabet[x[i]])){
-            score += alphabet[x[i]];
-        }
+        for (const [key, value] of Object.entries(alphabet)) {
+            if (key === x[i]){
+                score += value;
+            }
+}
         
     }
     console.log(score);
@@ -39,4 +42,5 @@ function high(x){
 
 
 }
-high('abad');
+high(['abad', 'svetlin', 'are']);
+high('svetlin');
