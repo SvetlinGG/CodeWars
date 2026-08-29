@@ -28,19 +28,38 @@ function high(x){
     z: 26
 };
     let score = 0;
-    
-    for ( let i = 0; i < x.length; i++){
+    let arr = x.map(word => word.split('')).map((word, index) => {
         for (const [key, value] of Object.entries(alphabet)) {
-            if (key === x[i]){
-                score += value;
-            }
-}
-        
-    }
+                if (key === word[index]){
+                    score += value;
+                }
+        }
+    });
+    
     console.log(score);
+    
+    
+    
+    
+    // for ( let i = 0; i < arr.length; i++){
+    //     for (let j = 0; j < arr[i].length; j++){
+    //         for (const [key, value] of Object.entries(alphabet)) {
+    //             //newArr.push(arr[i][j])
+    //             if (key === arr[i][j]){
+    //                 score += value;
+    //         }
+    //     }
+        
+        
+    //     }
+        
+    // }
+    //console.log(score);
+    
+    //console.log(newArr);
     
 
 
 }
 high(['abad', 'svetlin', 'are']);
-high('svetlin');
+//high('svetlin');
